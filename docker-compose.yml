@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - onion_net
+
+  tor:
+    image: goldy/tor-hidden-service:latest
+    environment:
+      WEBSITE_TOR_SERVICE_HOSTS: 80:web:3000
+      # Uncomment and set these for persistent .onion address
+      # WEBSITE_TOR_SERVICE_KEY: ${TOR_SERVICE_KEY}
+      # WEBSITE_TOR_SERVICE_VERSION: '3'
+    networks:
+      - onion_net
+    volumes:
+      - tor_data:/var/lib/tor/hidden_service/
+
+networks:
+  onion_net:
+    driver: bridge
+
+volumes:
+  tor_data:
