@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar DPhack Services</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+        }
+        h1 {
+            background: linear-gradient(to right, #ff0000, #800080);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 2rem;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #ff0000, #800080);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            margin: 1rem 0;
+        }
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 2rem;
+            color: #cccccc;
+        }
+        .warning {
+            color: #ff4444;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DPhack Services - Paquete de Instalación</h1>
+        <a href="dphack-services.zip" class="download-btn">Descargar Proyecto Completo</a>
+        
+        <div class="instructions">
+            <h3>Instrucciones de Instalación:</h3>
+            <ol>
+                <li>Descarga el archivo ZIP</li>
+                <li>Extrae el contenido en tu computadora</li>
+                <li>Instala Docker Desktop para Windows</li>
+                <li>Ejecuta setup-onion.bat como administrador</li>
+                <li>Espera a que se genere tu dirección .onion</li>
+            </ol>
+        </div>
+
+        <p class="warning">
+            ⚠️ Asegúrate de tener Docker Desktop instalado y en ejecución antes de iniciar la instalación
+        </p>
+    </div>
+</body>
+</html>
